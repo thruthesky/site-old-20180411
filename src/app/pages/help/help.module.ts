@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { HelpPage } from './help.page';
-
+import { HeaderComponentModule } from '../../components/header/header.component.module';
 const routes: Routes = [
     { path: '', component: HelpPage }
 ];
@@ -12,13 +12,14 @@ const routes: Routes = [
     imports: [
         CommonModule,
         IonicModule,
-        RouterModule.forChild(routes)
+        RouterModule.forChild(routes),
+        HeaderComponentModule
     ],
     exports: [
         RouterModule
     ],
     declarations: [
-        HelpPage,
+        HelpPage
     ],
     entryComponents: [
         HelpPage

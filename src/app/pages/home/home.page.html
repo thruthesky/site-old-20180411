@@ -1,17 +1,7 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Home Page
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content padding>
-  Welcome to homepage.
-  <p>
-    Go to
-    <a routerLink="/help">Help</a>
-    <a [routerLink]="['/help']">HELP</a>
-    <button routerLink="/help">Help Button</button>
-  </p>
-</ion-content>
+<app-component-header></app-component-header>
+<h1>Home Page</h1>
+Welcome to homepage.
+<p>
+  Go to
+  <ion-button routerLink="/help">Help Button</ion-button>
+</p>

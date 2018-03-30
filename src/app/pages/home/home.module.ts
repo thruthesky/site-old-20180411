@@ -3,22 +3,23 @@ import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { HomePage } from './home.page';
+import { HeaderComponentModule } from '../../components/header/header.component.module';
 
 const routes: Routes = [
   { path: '', component: HomePage }
 ];
-
 @NgModule({
   imports: [
     CommonModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    HeaderComponentModule
   ],
   exports: [
     RouterModule
   ],
   declarations: [
-    HomePage,
+    HomePage
   ],
   entryComponents: [
     HomePage
