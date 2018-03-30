@@ -1,12 +1,17 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Home Page
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+  Welcome to homepage.
+  <p>
+    Go to
+    <a routerLink="/help">Help</a>
+    <a [routerLink]="['/help']">HELP</a>
+    <button routerLink="/help">Help Button</button>
+  </p>
 </ion-content>

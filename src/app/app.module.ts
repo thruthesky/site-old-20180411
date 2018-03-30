@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicModule } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
-import { PagesModule } from './pages/pages.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { PagesModule } from './pages/pages.module';
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    PagesModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
