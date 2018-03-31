@@ -4,6 +4,20 @@ import { IonicModule } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ShareService } from './providers/share.service';
+import { FireService, FirelibraryModule } from './modules/firelibrary/core';
+
+import * as firebase from 'firebase';
+import 'firebase/firestore';
+firebase.initializeApp({
+  apiKey: 'AIzaSyBEv8lzyUI6kB8RyxG8xKnzv4WA6KfS6e4',
+  authDomain: 'ontue-client-sites.firebaseapp.com',
+  databaseURL: 'https://ontue-client-sites.firebaseio.com',
+  projectId: 'ontue-client-sites',
+  storageBucket: 'ontue-client-sites.appspot.com',
+  messagingSenderId: '328021421807'
+});
+
+
 @NgModule({
   declarations: [
     AppComponent
@@ -13,10 +27,12 @@ import { ShareService } from './providers/share.service';
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    FirelibraryModule.forRoot({ firebaseApp: firebase.app(), functions: true })
   ],
   providers: [
-    ShareService
+    ShareService,
+    FireService
   ],
   bootstrap: [AppComponent]
 })
