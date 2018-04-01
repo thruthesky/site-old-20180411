@@ -13,4 +13,11 @@ export class ShareService {
         this.color = color;
         console.log(`Color has been set to ${this.color}`);
     }
+    getDomain() {
+        return window.location.hostname;
+    }
+
+    isKatalkenglishTheme() {
+        return this.getDomain().indexOf('katalkenglish') !== -1;
+    }
 }
