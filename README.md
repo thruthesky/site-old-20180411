@@ -3,7 +3,7 @@
 
 # TODO
 
-* move installation page to `src/app/pages/themes/katalkenglish/installation`
+* move installation page to `src/app/sites/katalkenglish/installation`
 * Save company information into firestore settings documents.
   And display it in each sub domain.
 * Do registration and profile update. Student and Teachers are share this page.
@@ -31,30 +31,32 @@ Save these domains in `hosts` for test.
 ## Pages
 
 
-### themes folder.
+### sites folder.
 
-There are 3 themes under `src/app/pages/themes` folder for each part of business role.
+There are 3 different domains(themes) under `src/app/sites` folder for each part of business role.
 
-1. `ontue` theme for teacher for teacher site.
-2. `withcenter` theme for franchise site.
-3. `katalkenglish` theme for student site.
+1. `ontue` for teacher for teacher site.
+2. `withcenter` for franchise site.
+3. `katalkenglish` for student site.
 
-Each theme folder has its own components folder for header and footer and other components design.
+Each site folder has its own components folder for header and footer and other components design.
 
-* `src/app/pages/themes/{theme-name}/components`
+* `src/app/sites/{site-name}/components`
 
-And all of theme has `home` folder to display its front page.
+And all of site has `{site}-home` folder to display its front page.
 
-* `src/app/pages/themes/{theme-name}/{theme-name-page-name}`. Note that `pages` path is missed under theme folder.
+* `src/app/sites/{site-name}/{site-name-page-name}`. Note that `pages` path is missed under theme folder.
 
-### Pages in themes folder.
+### Pages in site folder.
 
-Since each theme has different contents, themes should have its own pages.
+Since each domain has different contents, they should have its own pages.
 
-For instance, student and teacher has completely diffent content on help page, so, each theme should have a different home folder in each theme.
+For instance, katalkenglish.com( student site ) and ontue.com ( teacher site ) has completely diffent content on help page, so, each of them should have a different home page folder.
 
-* Register page and Profile update page may share between themes.
-* Installation page should be only under `katalkenglish` theme.
+
+## Components
+
+* Register page and Profile update page have some common code. If you want to create a componet and share between ontue.com and katalkenglish.com, you will need to make it as component.
 
 
 

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ShareService } from '../../../../../providers/share.service';
-import { FireService } from '../../../../../modules/firelibrary/core';
+import { ShareService } from '../../../../providers/share.service';
+import { FireService } from '../../../../modules/firelibrary/core';
 
 @Component({
   selector: 'app-component-katalkenglish-header',

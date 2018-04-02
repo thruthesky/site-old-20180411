@@ -3,11 +3,18 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full',
-    loadChildren: './pages/themes/katalkenglish/katalkenglish-home/katalkenglish-home.module#KatalkEnglishHomePageModule' },
+    loadChildren: './sites/katalkenglish/katalkenglish-home/katalkenglish-home.module#KatalkEnglishHomePageModule' },
   { path: 'home', loadChildren: './pages/home/home.module#HomeModule' },
   { path: 'help', loadChildren: './pages/help/help.module#HelpModule' },
   { path: 'install', loadChildren: './pages/install/install.module#InstallModule' },
   { path: 'register', loadChildren: './pages/register/register.module#RegisterModule' },
+
+
+  /**
+   * Teacher
+   */
+  { path: 'teacher', loadChildren: './sites/ontue/ontue-home/ontue-home.module#OntueHomePageModule' },
+  { path: '**', loadChildren:  './sites/katalkenglish/katalkenglish-home/katalkenglish-home.module#KatalkEnglishHomePageModule' }
 ];
 
 
@@ -17,3 +24,6 @@ const routes: Routes = [
 })
 export class AppRoutingModule {
 }
+
+
+

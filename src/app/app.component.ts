@@ -15,10 +15,29 @@ export class AppComponent {
     // console.log(`current: ${share.color}, change: black`);
     // share.setColor('black');
 
-    if ( share.isKatalkenglishTheme() ) {
-      router.navigateByUrl('');
+    /**
+     * Check if any route is accessed.
+     */
+    const segments = share.getQuerySegments();
+    if (segments.length) {
+
     } else {
-      router.navigateByUrl('/install');
+      /**
+       * If no route accessed. You need to show first page of each domain.
+       */
+      if (share.isKatalkenglishTheme()) {
+        router.navigateByUrl('');
+      } else if (share.isOntueTheme()) {
+        router.navigateByUrl('/teacher');
+      } else if (share.isWithcenterTheme()) {
+        router.navigateByUrl('/franchise');
+      } else {
+        /**
+         * For all unknown domain, go katalkenglish theme.
+         */
+        router.navigateByUrl('');
+      }
     }
+
   }
 }
