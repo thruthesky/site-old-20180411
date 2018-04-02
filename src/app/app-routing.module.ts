@@ -11,9 +11,20 @@ const routes: Routes = [
 
 
   /**
-   * Teacher
+   * ontue.com for Teachers
    */
   { path: 'teacher', loadChildren: './sites/ontue/ontue-home/ontue-home.module#OntueHomePageModule' },
+
+
+  /**
+   * withcenter.com for Franchise web site.
+   */
+  { path: 'franchise', loadChildren: './sites/withcenter/withcenter-home/withcenter-home.module#WithcenterHomePageModule' },
+
+
+  /**
+   * Defaults
+   */
   { path: '**', loadChildren:  './sites/katalkenglish/katalkenglish-home/katalkenglish-home.module#KatalkEnglishHomePageModule' }
 ];
 
