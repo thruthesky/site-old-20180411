@@ -2,7 +2,8 @@
 
 
 # TODO
-
+* Language Translation by `fire.setLanguage('ko')`.
+ * Update `setLanguage('lang-code', 'JSON URL')` so it can load language from outsite or it can specify the path of json on the project.
 * move installation page to `src/app/sites/katalkenglish/installation`
 * Save company information into firestore settings documents.
   And display it in each sub domain.
@@ -53,11 +54,16 @@ Since each domain has different contents, they should have its own pages.
 
 For instance, katalkenglish.com( student site ) and ontue.com ( teacher site ) has completely diffent content on help page, so, each of them should have a different home page folder.
 
+## Shared Pages
 
-## Components
+* Register page and Profile update page have some common for each site.
+  If you want to create a page that is shared by other sites, then the page must be saved under `src/app/pages` folder.
+  
 
-* Register page and Profile update page have some common code. If you want to create a componet and share between ontue.com and katalkenglish.com, you will need to make it as component.
 
+## Shared Components
+
+* Share components must be saved under `src/app/components`
 
 
 
@@ -82,6 +88,16 @@ For instance, katalkenglish.com( student site ) and ontue.com ( teacher site ) h
 # Lazy Loading
 
 * All page must be lazy loaded. This means all page folder must be a module and registered as a route.
+
+
+
+# Layout for each site.
+
+* Each site has its own header, footer and possibly side menus and more.
+* Layout is set in `app.component.html` for each domain.
+  In this template, it includes each site's layout assets.
+* Each site's header, footer components must be saved under that site's folder as a module and will be imported by `app module` and used in `app.component.html` to display the layout.
+
 
 
 

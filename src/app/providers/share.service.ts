@@ -1,13 +1,37 @@
 import { Injectable } from '@angular/core';
 
 
+export const SITE_KATALKENGLISH = 'katalkenglish';
+export const SITE_ONTUE = 'ontue';
+export const SITE_WITHCENTER = 'withcenter';
+
+export interface SITE {
+    ontue: boolean;
+    withcenter: boolean;
+    katalkenglish: boolean;
+}
 
 @Injectable()
 export class ShareService {
     color: string = null;
+
+    /**
+     * It has site code on booting.
+     * Use this in template whenever you need site code. This will not recompute anything and it's good to use in template.
+     * @code
+     *      <section id="ontue" *ngIf=" share.site.ontue ">
+     */
+    site: SITE = {
+        ontue: false,
+        katalkenglish: false,
+        withcenter: false
+    };
     constructor() {
         // console.log(`ShareService::constructor()`);
         // this.setColor('white');
+
+
+        this.site[this.getSite()] = true;
 
 
     }
@@ -19,16 +43,42 @@ export class ShareService {
         return window.location.hostname;
     }
 
+    /**
+     * Returns site code.
+     */
+    getSite() {
+        if (this.isKatalkenglishTheme()) {
+            return SITE_KATALKENGLISH;
+        } else if (this.isOntueTheme()) {
+            return SITE_ONTUE;
+        } else if (this.isWithcenterTheme()) {
+            return SITE_WITHCENTER;
+        } else {
+            return SITE_KATALKENGLISH;
+        }
+    }
+
     isKatalkenglishTheme() {
-        return this.getDomain().indexOf('katalkenglish') !== -1;
+        return this.getDomain().indexOf(SITE_KATALKENGLISH) !== -1;
     }
     isOntueTheme() {
-        return this.getDomain().indexOf('ontue') !== -1;
+        return this.getDomain().indexOf(SITE_ONTUE) !== -1;
     }
     isWithcenterTheme() {
-        console.log('isWithcentertheme?');
-        return this.getDomain().indexOf('withcenter') !== -1;
+        return this.getDomain().indexOf(SITE_WITHCENTER) !== -1;
     }
+    get homeUrl() {
+        if (this.site.katalkenglish) {
+            return '/';
+        } else if (this.site.ontue) {
+            return '/teacher';
+        } else if (this.site.withcenter) {
+            return 'franchise';
+        } else {
+            return '/';
+        }
+    }
+
     /**
      * Returns an object of keys/values of the HTTP query parameter.
      * @returns
