@@ -8,6 +8,8 @@ import { FireService, FirelibraryModule } from './modules/firelibrary/core';
 
 import * as firebase from 'firebase';
 import 'firebase/firestore';
+import { OntueHeaderComponentModule } from './sites/ontue/components/ontue-header/ontue-header.module';
+import { KatalkEnglishHeaderComponentModule } from './sites/katalkenglish/components/katalkenglish-header/katalkenglish-header.module';
 firebase.initializeApp({
   apiKey: 'AIzaSyBEv8lzyUI6kB8RyxG8xKnzv4WA6KfS6e4',
   authDomain: 'ontue-client-sites.firebaseapp.com',
@@ -16,7 +18,6 @@ firebase.initializeApp({
   storageBucket: 'ontue-client-sites.appspot.com',
   messagingSenderId: '328021421807'
 });
-
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ firebase.initializeApp({
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    FirelibraryModule.forRoot({ firebaseApp: firebase.app(), functions: true })
+    FirelibraryModule.forRoot({ functions: true }),
+    OntueHeaderComponentModule,
+    KatalkEnglishHeaderComponentModule
   ],
   providers: [
     ShareService,

@@ -3,8 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { FireService, USER } from './../../modules/firelibrary/core';
 import { ShareService } from '../../providers/share.service';
 
+
 @Component({
-    selector: 'app-page-register',
+    selector: 'app-component-register',
     templateUrl: 'register.page.html',
     styleUrls: ['register.page.scss'],
 })
@@ -20,7 +21,6 @@ export class RegisterPage implements OnInit {
         // this.user.displayName = 'Name';
         // this.onSubmitRegisterForm();
     }
-
 
     onSubmitRegisterForm(event?: Event) {
         if (event) {

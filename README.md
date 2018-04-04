@@ -82,3 +82,19 @@ For instance, katalkenglish.com( student site ) and ontue.com ( teacher site ) h
 # Lazy Loading
 
 * All page must be lazy loaded. This means all page folder must be a module and registered as a route.
+
+
+
+
+# FlowChart
+
+## Domain Navigation
+
+* The app decide which `site` to use based on the domain user accesses/visits.
+ * For instance, `wwww.ontue.com` domain will open the page `src/app/sites/ontue/ontue-home/ontue-home.page`
+ * This navigation is done by the combination of `app-routing.modules.ts` and `app.component.ts`.
+
+
+# Boostrap CSS Version 4.0 Support
+
+* @see `theme/bootstrap-copy.scss` for full documentation.

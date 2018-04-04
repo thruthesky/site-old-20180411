@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: 'home', loadChildren: './pages/home/home.module#HomeModule' },
   { path: 'help', loadChildren: './pages/help/help.module#HelpModule' },
   { path: 'install', loadChildren: './pages/install/install.module#InstallModule' },
-  { path: 'register', loadChildren: './pages/register/register.module#RegisterModule' },
+  { path: 'register', loadChildren: './pages/register/register.page.module#RegisterPageModule' },
 
 
   /**

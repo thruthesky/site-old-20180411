@@ -32,4 +32,4 @@ const routes: Routes = [
   bootstrap: [RegisterPage],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class RegisterModule { }
+export class RegisterPageModule { }

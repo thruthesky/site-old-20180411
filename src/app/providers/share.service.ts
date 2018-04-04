@@ -26,6 +26,7 @@ export class ShareService {
         return this.getDomain().indexOf('ontue') !== -1;
     }
     isWithcenterTheme() {
+        console.log('isWithcentertheme?');
         return this.getDomain().indexOf('withcenter') !== -1;
     }
     /**

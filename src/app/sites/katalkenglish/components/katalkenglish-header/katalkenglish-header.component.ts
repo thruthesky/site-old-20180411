@@ -3,7 +3,7 @@ import { ShareService } from '../../../../providers/share.service';
 import { FireService } from '../../../../modules/firelibrary/core';
 
 @Component({
-  selector: 'app-component-katalkenglish-header',
+  selector: 'katalkenglish-header',
   templateUrl: 'katalkenglish-header.component.html',
   styleUrls: ['katalkenglish-header.component.scss'],
 })

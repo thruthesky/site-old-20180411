@@ -3,7 +3,7 @@ import { ShareService } from '../../../../providers/share.service';
 import { FireService } from '../../../../modules/firelibrary/core';
 
 @Component({
-    selector: 'app-component-ontue-header',
+    selector: 'ontue-header',
     templateUrl: 'ontue-header.component.html',
     styleUrls: ['ontue-header.component.scss'],
 })
