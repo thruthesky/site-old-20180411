@@ -26,6 +26,8 @@ export class ShareService {
         katalkenglish: false,
         withcenter: false
     };
+
+    
     constructor() {
         // console.log(`ShareService::constructor()`);
         // this.setColor('white');

@@ -2,8 +2,8 @@
 
 
 # TODO
-* Language Translation by `fire.setLanguage('ko')`.
- * Update `setLanguage('lang-code', 'JSON URL')` so it can load language from outsite or it can specify the path of json on the project.
+* Language Translation by `fire.setLanguage('ko|jp|en')`.
+ * 4 language support by default.
 * move installation page to `src/app/sites/katalkenglish/installation`
 * Save company information into firestore settings documents.
   And display it in each sub domain.
@@ -24,6 +24,13 @@ Save these domains in `hosts` for test.
 * www.withcenter.org, withcenter.org
 * www.katalkenglish.org, katalkenglish.org abc.katalkenglish.org def.katalkenglish.org test.katalkenglish.org
 
+
+## Run
+
+````
+$ npm run s
+$ ng s --disable-host-check
+````
 
 
 
@@ -85,20 +92,23 @@ For instance, katalkenglish.com( student site ) and ontue.com ( teacher site ) h
 
 
 
-# Lazy Loading
+# Route and Lazy Loading
+
+* Do not put any route on submodule. Only on app module has routings.
 
 * All page must be lazy loaded. This means all page folder must be a module and registered as a route.
+  Except header & footer templates which is needed to render layout. @see #Layout
 
 
 
 # Layout for each site.
 
 * Each site has its own header, footer and possibly side menus and more.
-* Layout is set in `app.component.html` for each domain.
-  In this template, it includes each site's layout assets.
-* Each site's header, footer components must be saved under that site's folder as a module and will be imported by `app module` and used in `app.component.html` to display the layout.
+* Layout is designed in `app.component.html` for each site.
+  It imports each site's `header`, `footer` components.
+  This means, each site's header & footer is not dynamically loaded. These are loaded on app booting.
 
-
+* Each site's header, footer components must be saved under that site's components folder as a module and will be imported by `app module` and used in `app.component.html` to display the layout.
 
 
 
