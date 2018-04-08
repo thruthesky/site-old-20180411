@@ -14,6 +14,7 @@ export class KatalkEnglishHomePage {
     public fire: FireService
   ) {
 
+    share.language.resetUserLanguage('en');
   }
 }
 

@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 
-import { HeaderComponentModule } from '../../components/header/header.component.module';
+
 import { RegisterPage } from './register.page';
 
 
@@ -17,8 +17,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes),
-    HeaderComponentModule
+    RouterModule.forChild(routes)
   ],
   exports: [
     RouterModule

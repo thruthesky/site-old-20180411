@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { LanguageService } from './language.service';
 
 
 export const SITE_KATALKENGLISH = 'katalkenglish';
@@ -27,15 +28,17 @@ export class ShareService {
         withcenter: false
     };
 
-    
-    constructor() {
+
+    constructor(
+        public language: LanguageService
+    ) {
         // console.log(`ShareService::constructor()`);
         // this.setColor('white');
 
 
         this.site[this.getSite()] = true;
 
-
+        // this.language.setUserLanguage();
     }
     setColor(color) {
         this.color = color;

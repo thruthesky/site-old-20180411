@@ -2,7 +2,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
-import { HeaderComponent } from './header.component';
+import { UserInfoComponent } from './user-info.component';
 
 @NgModule({
   imports: [
@@ -11,12 +11,12 @@ import { HeaderComponent } from './header.component';
     RouterModule
   ],
   declarations: [
-    HeaderComponent
+    UserInfoComponent
   ],
   exports: [
     RouterModule,
-    HeaderComponent
+    UserInfoComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class HeaderComponentModule { }
+export class UserInfoComponentModule { }

@@ -10,6 +10,7 @@ import * as firebase from 'firebase';
 import 'firebase/firestore';
 import { OntueHeaderComponentModule } from './sites/ontue/components/ontue-header/ontue-header.module';
 import { KatalkEnglishHeaderComponentModule } from './sites/katalkenglish/components/katalkenglish-header/katalkenglish-header.module';
+import { LanguageService } from './providers/language.service';
 firebase.initializeApp({
   apiKey: 'AIzaSyBEv8lzyUI6kB8RyxG8xKnzv4WA6KfS6e4',
   authDomain: 'ontue-client-sites.firebaseapp.com',
@@ -34,9 +35,11 @@ firebase.initializeApp({
     KatalkEnglishHeaderComponentModule
   ],
   providers: [
+    FireService,
     ShareService,
-    FireService
+    LanguageService
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

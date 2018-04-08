@@ -27,6 +27,7 @@ export class RegisterPage implements OnInit {
             event.preventDefault();
         }
         console.log('user data: ', this.user);
+        //
         this.loader = true;
         this.fire.user.register(this.user).then(() => {
             console.log('user register: ');

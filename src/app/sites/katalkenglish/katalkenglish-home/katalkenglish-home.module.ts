@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { KatalkEnglishHomePage } from './katalkenglish-home.page';
 import { KatalkEnglishHeaderComponentModule } from '../components/katalkenglish-header/katalkenglish-header.module';
+import { UserInfoComponentModule } from '../../../components/user-info/user-info.component.module';
 
 const routes: Routes = [
   { path: '', component: KatalkEnglishHomePage }
@@ -13,7 +14,8 @@ const routes: Routes = [
     CommonModule,
     IonicModule,
     RouterModule.forChild(routes),
-    KatalkEnglishHeaderComponentModule
+    KatalkEnglishHeaderComponentModule,
+    UserInfoComponentModule
   ],
   exports: [
     RouterModule

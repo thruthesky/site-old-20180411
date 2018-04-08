@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HomePage } from './pages/home/home.page';
 import { ShareService } from './providers/share.service';
 import { Router } from '@angular/router';
 @Component({

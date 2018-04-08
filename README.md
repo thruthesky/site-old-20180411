@@ -3,8 +3,9 @@
 
 # TODO
 * Language Translation by `fire.setLanguage('ko|jp|en')`.
- * 4 language support by default.
+* 4 language support by default. English, Japanese, Korean, Chinese.
 * move installation page to `src/app/sites/katalkenglish/installation`
+* 2 Layout for each domain. one for `desktop`, the other for `mobile`.
 * Save company information into firestore settings documents.
   And display it in each sub domain.
 * Do registration and profile update. Student and Teachers are share this page.
@@ -110,6 +111,9 @@ For instance, katalkenglish.com( student site ) and ontue.com ( teacher site ) h
 
 * Each site's header, footer components must be saved under that site's components folder as a module and will be imported by `app module` and used in `app.component.html` to display the layout.
 
+* You can have more than one(1) layout for a site IF you are going to edit `app.component.html`.
+ * Layout of `www.katalkenglish.com` for desktop.
+ * Layout of `www.katalkenglish.com` for mobile.
 
 
 # FlowChart
@@ -123,4 +127,4 @@ For instance, katalkenglish.com( student site ) and ontue.com ( teacher site ) h
 
 # Boostrap CSS Version 4.0 Support
 
-* @see `theme/bootstrap-copy.scss` for full documentation.
+* @see `themes/bootstrap-custom.scss`.
