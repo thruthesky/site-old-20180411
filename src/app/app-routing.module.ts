@@ -4,8 +4,6 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { path: '', pathMatch: 'full',
     loadChildren: './sites/katalkenglish/katalkenglish-home/katalkenglish-home.module#KatalkEnglishHomePageModule' },
-  // { path: 'home',
-  //   loadChildren: './sites/katalkenglish/katalkenglish-help/katalkenglish-help.module#KatalkEnglishHelpPageModule' },
   { path: 'help',
     loadChildren: './sites/katalkenglish/katalkenglish-help/katalkenglish-help.module#KatalkEnglishHelpPageModule' },
   { path: 'install', loadChildren: './pages/install/install.module#InstallModule' },
@@ -15,7 +13,8 @@ const routes: Routes = [
   /**
    * ontue.com for Teachers
    */
-  { path: 'teacher', loadChildren: './sites/ontue/ontue-home/ontue-home.module#OntueHomePageModule' },
+  { path: 'teacher',
+    loadChildren: './sites/ontue/ontue-home/ontue-home.module#OntueHomePageModule' },
 
 
   /**
@@ -27,7 +26,7 @@ const routes: Routes = [
   /**
    * Defaults
    */
-  { path: '**', loadChildren:  './sites/katalkenglish/katalkenglish-home/katalkenglish-home.module#KatalkEnglishHomePageModule' }
+  { path: '**', loadChildren:  './pages/not-found/not-found.module#NotFoundPageModule' }
 ];
 
 

@@ -13,7 +13,7 @@ export class KatalkEnglishHomePage {
     public share: ShareService,
     public fire: FireService
   ) {
-
+    console.log(`KatalkEnglisHomePage:;constructor()`);
     share.language.resetUserLanguage('en');
   }
 }
