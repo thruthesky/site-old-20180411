@@ -1,7 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { FireService, USER } from './../../modules/firelibrary/core';
-import { ShareService } from '../../providers/share.service';
+import { AppService } from '../../providers/app.service';
 
 
 @Component({
@@ -13,7 +13,10 @@ export class RegisterPage implements OnInit {
 
     user = <USER>{};
     loader = false;
-    constructor(public fire: FireService) { }
+    constructor(
+        public fire: FireService,
+        public a: AppService
+    ) { }
 
     ngOnInit() {
         // this.user.email = 'test' + (new Date).getTime() + '@user.com';
@@ -36,6 +39,7 @@ export class RegisterPage implements OnInit {
                     this.fire.user.create(this.user).then(re => {
                         console.log('User registration comeplete!', re);
                         this.loader = false;
+                        this.a.openProfile();
                     }).catch(e => {
                         this.loader = false;
                         alert(e.message);

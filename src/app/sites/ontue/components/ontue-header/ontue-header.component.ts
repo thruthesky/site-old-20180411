@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ShareService } from '../../../../providers/share.service';
+import { AppService } from '../../../../providers/app.service';
 import { FireService } from '../../../../modules/firelibrary/core';
 
 @Component({
@@ -9,7 +9,7 @@ import { FireService } from '../../../../modules/firelibrary/core';
 })
 export class OntueHeaderComponent {
     constructor(
-        public share: ShareService,
+        public share: AppService,
         public fire: FireService
     ) {
 

@@ -2,7 +2,9 @@
     <ion-button routerLink="{{ share.homeUrl }}">HOME</ion-button>
     <ion-button routerLink="/help">Help</ion-button>
     <ion-button routerLink="/login" *ngIf="fire.user.isLogout">Login</ion-button>
-    <ion-button (click)=" fire.user.logout() " *ngIf="fire.user.isLogin">Log out</ion-button>
+    <ion-button (click)=" onClickLogout() " *ngIf="fire.user.isLogin">Log out</ion-button>
     <ion-button routerLink="/register" *ngIf="fire.user.isLogout">Register</ion-button>
+    <ion-button routerLink="/profile" *ngIf="fire.user.isLogin">Profile update</ion-button>
     <ion-button routerLink="/install">Install</ion-button>
 </p>
+

@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicModule } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ShareService } from './providers/share.service';
+import { AppService } from './providers/app.service';
 import { FireService, FirelibraryModule } from './modules/firelibrary/core';
 
 import * as firebase from 'firebase';
@@ -36,7 +36,7 @@ firebase.initializeApp({
   ],
   providers: [
     FireService,
-    ShareService,
+    AppService,
     LanguageService
   ],
   bootstrap: [AppComponent]

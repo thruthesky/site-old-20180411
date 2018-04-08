@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ShareService } from '../../../providers/share.service';
+import { AppService } from '../../../providers/app.service';
 import { FireService } from '../../../modules/firelibrary/core';
 
 
@@ -10,7 +10,7 @@ import { FireService } from '../../../modules/firelibrary/core';
 })
 export class KatalkEnglishHomePage {
   constructor(
-    public share: ShareService,
+    public share: AppService,
     public fire: FireService
   ) {
     console.log(`KatalkEnglisHomePage:;constructor()`);

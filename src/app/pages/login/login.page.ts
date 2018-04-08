@@ -1,7 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { FireService, USER } from './../../modules/firelibrary/core';
-import { ShareService } from '../../providers/share.service';
+import { AppService } from '../../providers/app.service';
 import { Router } from '@angular/router';
 
 

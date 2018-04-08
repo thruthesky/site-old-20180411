@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core';
+import { Injectable, NgZone } from '@angular/core';
 import { LanguageService } from './language.service';
+import { Router } from '@angular/router';
 
 
 export const SITE_KATALKENGLISH = 'katalkenglish';
@@ -13,7 +14,7 @@ export interface SITE {
 }
 
 @Injectable()
-export class ShareService {
+export class AppService {
     color: string = null;
 
     /**
@@ -30,9 +31,11 @@ export class ShareService {
 
 
     constructor(
+        public ngZone: NgZone,
+        public router: Router,
         public language: LanguageService
     ) {
-        // console.log(`ShareService::constructor()`);
+        // console.log(`AppService::constructor()`);
         // this.setColor('white');
 
 
@@ -143,5 +146,24 @@ export class ShareService {
         }
 
         return path.split('/');
+    }
+
+    /**
+     * Re-draw the template view.
+     * Call this method after asynchronous data display in view.
+     * @param timeout timeout
+     */
+    rerender(timeout: number = 0) {
+        setTimeout(() => this.ngZone.run(() => { }), timeout);
+    }
+
+    /**
+     * Move the route to domain's Home
+     */
+    openHome() {
+        this.router.navigateByUrl(this.homeUrl);
+    }
+    openProfile() {
+        this.router.navigateByUrl('/profile');
     }
 }

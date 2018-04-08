@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ShareService } from '../../../../providers/share.service';
+import { AppService } from '../../../../providers/app.service';
 import { FireService } from '../../../../modules/firelibrary/core';
 
 @Component({
@@ -9,12 +9,16 @@ import { FireService } from '../../../../modules/firelibrary/core';
 })
 export class KatalkEnglishHeaderComponent {
   constructor(
-    public share: ShareService,
+    public share: AppService,
     public fire: FireService
   ) {
     // console.log(`HeaderComponent:constructor()`);
     // console.log(`current: ${share.color}, change: red`);
     // share.setColor('red');
+  }
+  onClickLogout() {
+    this.fire.user.logout();
+    this.share.openHome();
   }
 }
 

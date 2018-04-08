@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ShareService } from '../../../providers/share.service';
+import { AppService } from '../../../providers/app.service';
 
 @Component({
   selector: 'app-page-katalkenglish-help',
@@ -8,7 +8,7 @@ import { ShareService } from '../../../providers/share.service';
 })
 export class KatalkEnglishHelpPage {
   constructor(
-    public share: ShareService
+    public share: AppService
   ) {
     // console.log(`HelpPage:constructor()`);
     // console.log(`current: ${share.color}, change: blue`);

@@ -1,6 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
-import { ShareService } from '../../providers/share.service';
+import { AppService } from '../../providers/app.service';
 
 
 @Component({
@@ -12,7 +12,7 @@ export class NotFoundPage implements OnInit {
 
 
     constructor(
-        public share: ShareService
+        public share: AppService
     ) {
         console.log(`NotFoundPage::constructor()`);
 
