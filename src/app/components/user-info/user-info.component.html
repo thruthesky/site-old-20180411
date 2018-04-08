@@ -1,6 +1,9 @@
-<section class="user-info">
-    <H3>USER INFO</H3>
-    <p>
-        Login {{ fire.t('email') }}: {{ fire.user.email }}
-    </p>
+<section class="user-info p-3">
+    <H3 class="m-0 p-0">USER INFO</H3>
+    <div *ngIf=" fire.user.isLogin ">
+        Your login {{ fire.t('email') }}: {{ fire.user.email }}
+    </div>
+    <div *ngIf=" fire.user.isLogout ">
+        You are not logged in.
+    </div>
 </section>

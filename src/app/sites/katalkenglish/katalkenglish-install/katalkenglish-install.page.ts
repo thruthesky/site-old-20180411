@@ -41,6 +41,8 @@ export class KatalkEnglishInstallPage implements OnInit {
     console.log(`Going to set ${this.fire.user.email} as admin`);
     this.fire.install({ email: this.fire.user.email }).then(re => {
       console.log('install: ', re);
+      this.fire.checkInstall()
+        .then( result => this.show.installed = result.data.installed );
     })
       .catch(e => alert(e.message));
     return false;
