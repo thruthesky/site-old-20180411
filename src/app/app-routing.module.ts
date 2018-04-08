@@ -2,20 +2,27 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full',
-    loadChildren: './sites/katalkenglish/katalkenglish-home/katalkenglish-home.module#KatalkEnglishHomePageModule' },
-  { path: 'help',
-    loadChildren: './sites/katalkenglish/katalkenglish-help/katalkenglish-help.module#KatalkEnglishHelpPageModule' },
-  { path: 'install',
-    loadChildren: './sites/katalkenglish/katalkenglish-install/katalkenglish-install.module#KatalkEnglishInstallModule' },
-  { path: 'register', loadChildren: './pages/register/register.page.module#RegisterPageModule' },
+  {
+    path: '', pathMatch: 'full',
+    loadChildren: './sites/katalkenglish/katalkenglish-home/katalkenglish-home.module#KatalkEnglishHomePageModule'
+  },
+  {
+    path: 'help',
+    loadChildren: './sites/katalkenglish/katalkenglish-help/katalkenglish-help.module#KatalkEnglishHelpPageModule'
+  },
+  {
+    path: 'install',
+    loadChildren: './sites/katalkenglish/katalkenglish-install/katalkenglish-install.module#KatalkEnglishInstallPageModule'
+  },
 
 
   /**
    * ontue.com for Teachers
    */
-  { path: 'teacher',
-    loadChildren: './sites/ontue/ontue-home/ontue-home.module#OntueHomePageModule' },
+  {
+    path: 'teacher',
+    loadChildren: './sites/ontue/ontue-home/ontue-home.module#OntueHomePageModule'
+  },
 
 
   /**
@@ -25,9 +32,24 @@ const routes: Routes = [
 
 
   /**
+   * Common pages
+   */
+  {
+    path: 'register',
+    loadChildren: './pages/register/register.module#RegisterPageModule'
+  },
+
+  {
+    path: 'login',
+    loadChildren: './pages/login/login.module#LoginPageModule'
+  },
+
+
+
+  /**
    * Defaults
    */
-  { path: '**', loadChildren:  './pages/not-found/not-found.module#NotFoundPageModule' }
+  { path: '**', loadChildren: './pages/not-found/not-found.module#NotFoundPageModule' }
 ];
 
 

@@ -5,28 +5,30 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 
 
-import { KatalkEnglishInstallPage } from './kakaotalkenglish-install.page';
+import { LoginPage } from './login.page';
+
+
 
 const routes: Routes = [
-  { path: '', component: KatalkEnglishInstallPage }
+  { path: '', component: LoginPage }
 ];
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes),
+    RouterModule.forChild(routes)
   ],
   exports: [
     RouterModule
   ],
   declarations: [
-    KatalkEnglishInstallPage
+    LoginPage
   ],
   entryComponents: [
-    KatalkEnglishInstallPage
+    LoginPage
   ],
-  bootstrap: [KatalkEnglishInstallPage],
+  bootstrap: [LoginPage],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class InstallModule { }
+export class LoginPageModule { }

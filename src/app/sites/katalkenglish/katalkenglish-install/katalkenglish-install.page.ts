@@ -3,19 +3,33 @@ import { ShareService } from '../../../providers/share.service';
 import { FireService } from '../../../modules/firelibrary/core';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'katalkenglish-install-page',
   templateUrl: 'katalkenglish-install.page.html',
   styleUrls: ['katalkenglish-install.page.scss'],
 })
 export class KatalkEnglishInstallPage implements OnInit {
+  show = {
+    loader: false,
+    content: false,
+    installed: false
+  };
   constructor(
     public router: Router,
     public share: ShareService,
     public fire: FireService
   ) {
-    console.log(router.url);
+    this.show.loader = true;
+
+    fire.checkInstall().then(re => {
+      this.show.loader = false;
+      this.show.content = true;
+      this.show.installed = re.data.installed;
+    })
+      .catch(e => {
+        this.show.loader = false;
+        alert(e.message);
+      });
   }
 
   ngOnInit() {
@@ -32,6 +46,7 @@ export class KatalkEnglishInstallPage implements OnInit {
     return false;
   }
 }
+
 
 
 
