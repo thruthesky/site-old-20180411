@@ -2,8 +2,7 @@
 
 
 # TODO
-* Language Translation by `fire.setLanguage('ko|jp|en')`.
-* 4 language support by default. English, Japanese, Korean, Chinese.
+
 * move installation page to `src/app/sites/katalkenglish/installation`
 * 2 Layout for each domain. one for `desktop`, the other for `mobile`.
 * Save company information into firestore settings documents.
@@ -12,6 +11,9 @@
 * Do LMS functionality.
 * Create forum with realtime chat functionality.
 * Do design.
+
+
+* Enhance. Language Translation for 4 languages. English, Korean, Japanese, Chinese.
 
 
 
@@ -33,6 +35,9 @@ $ npm run s
 $ ng s --disable-host-check
 ````
 
+# Documentation
+
+* [Ionic v4 Development Theory (Korean)](https://docs.google.com/document/d/12HPnIawKRAEKwZ6hftPtKNsUmhU5ENNu_WJZZuASsKE/edit#heading=h.dkfde9dlhii9)
 
 
 # Folder structure

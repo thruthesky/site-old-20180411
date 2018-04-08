@@ -5,10 +5,10 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 
 
-import { InstallPage } from './install.page';
+import { KatalkEnglishInstallPage } from './kakaotalkenglish-install.page';
 
 const routes: Routes = [
-  { path: '', component: InstallPage }
+  { path: '', component: KatalkEnglishInstallPage }
 ];
 @NgModule({
   imports: [
@@ -21,12 +21,12 @@ const routes: Routes = [
     RouterModule
   ],
   declarations: [
-    InstallPage
+    KatalkEnglishInstallPage
   ],
   entryComponents: [
-    InstallPage
+    KatalkEnglishInstallPage
   ],
-  bootstrap: [InstallPage],
+  bootstrap: [KatalkEnglishInstallPage],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class InstallModule { }

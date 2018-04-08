@@ -6,7 +6,8 @@ const routes: Routes = [
     loadChildren: './sites/katalkenglish/katalkenglish-home/katalkenglish-home.module#KatalkEnglishHomePageModule' },
   { path: 'help',
     loadChildren: './sites/katalkenglish/katalkenglish-help/katalkenglish-help.module#KatalkEnglishHelpPageModule' },
-  { path: 'install', loadChildren: './pages/install/install.module#InstallModule' },
+  { path: 'install',
+    loadChildren: './sites/katalkenglish/katalkenglish-install/katalkenglish-install.module#KatalkEnglishInstallModule' },
   { path: 'register', loadChildren: './pages/register/register.page.module#RegisterPageModule' },
 
 
