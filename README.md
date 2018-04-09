@@ -146,3 +146,11 @@ For instance, katalkenglish.com( student site ) and ontue.com ( teacher site ) h
 
 * @see [Bootstrap v4 comtomization](https://getbootstrap.com/docs/4.0/getting-started/theming/#importing)
 * @see `themes/bootstrap-custom.scss`.
+
+
+# Font Awesome
+
+Since fontawesome takes a lot of spaces, you will only copy the SVG XML code into each templates.
+
+* Since we are using lazy loading, putting SVG XML code in template may be a good choice even if it does not reuse the icon.
+

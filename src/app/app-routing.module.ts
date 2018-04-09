@@ -49,6 +49,11 @@ const routes: Routes = [
     loadChildren: './pages/profile/profile.page.module#ProfilePageModule'
   },
 
+  {
+    path: 'forum',
+    loadChildren: './pages/forum/forum.page.module#ForumPageModule'
+  },
+
 
 
   /**

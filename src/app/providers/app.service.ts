@@ -18,7 +18,7 @@ export class AppService {
     color: string = null;
 
     /**
-     * It has site code on booting.
+     * It prepares site code on booting. So, it won't be computed again on run time.
      * Use this in template whenever you need site code. This will not recompute anything and it's good to use in template.
      * @code
      *      <section id="ontue" *ngIf=" a.site.ontue ">
@@ -51,30 +51,33 @@ export class AppService {
         return window.location.hostname;
     }
 
+
+    isKatalkenglishDomain() {
+        return this.getDomain().indexOf(SITE_KATALKENGLISH) !== -1;
+    }
+    isOntueDomain() {
+        return this.getDomain().indexOf(SITE_ONTUE) !== -1;
+    }
+    isWithcenterDomain() {
+        return this.getDomain().indexOf(SITE_WITHCENTER) !== -1;
+    }
+
     /**
      * Returns site code.
      */
     getSite() {
-        if (this.isKatalkenglishTheme()) {
+        if (this.isKatalkenglishDomain()) {
             return SITE_KATALKENGLISH;
-        } else if (this.isOntueTheme()) {
+        } else if (this.isOntueDomain()) {
             return SITE_ONTUE;
-        } else if (this.isWithcenterTheme()) {
+        } else if (this.isWithcenterDomain()) {
             return SITE_WITHCENTER;
         } else {
             return SITE_KATALKENGLISH;
         }
     }
 
-    isKatalkenglishTheme() {
-        return this.getDomain().indexOf(SITE_KATALKENGLISH) !== -1;
-    }
-    isOntueTheme() {
-        return this.getDomain().indexOf(SITE_ONTUE) !== -1;
-    }
-    isWithcenterTheme() {
-        return this.getDomain().indexOf(SITE_WITHCENTER) !== -1;
-    }
+
     get homeUrl() {
         if (this.site.katalkenglish) {
             return '/';
