@@ -4,7 +4,7 @@ import { DATA_UPLOAD, FireService, POST } from './../../modules/firelibrary/core
 
 
 @Component({
-  selector: 'data-component',
+  selector: 'app-data',
   templateUrl: 'data.component.html',
   styleUrls: ['data.component.scss']
 })

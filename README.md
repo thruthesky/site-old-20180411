@@ -3,6 +3,8 @@
 
 # TODO
 
+* Teacher List.
+* Do all the issues first on https://github.com/thruthesky/ontue#issue-sh-boards
 * move installation page to `src/app/sites/katalkenglish/installation`
 * 2 Layout for each domain. one for `desktop`, the other for `mobile`.
 * Save company information into firestore settings documents.
@@ -38,6 +40,8 @@ $ ng s --disable-host-check
 # Documentation
 
 * [Ionic v4 Development Theory (Korean)](https://docs.google.com/document/d/12HPnIawKRAEKwZ6hftPtKNsUmhU5ENNu_WJZZuASsKE/edit#heading=h.dkfde9dlhii9)
+
+* [Ontue v3 Issues](https://github.com/thruthesky/ontue#issue-sh-boards)
 
 
 # Folder structure

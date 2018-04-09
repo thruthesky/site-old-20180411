@@ -18,13 +18,13 @@
         <span class="loader" *ngIf="loader.delete">Deleting...</span>
       </div>
       <div>Percentage: {{ percentage }}%</div>
-      <data-component [path]="'profile-photo'"
+      <app-data [path]="'profile-photo'"
         [data]=" data "
         [deleteOldFiles]="true"
         [displayFiles]="false"
         [displayProgress]="false"
         (upload)="onUpload()"
-        (progress)="onProgress( $event )"></data-component>
+        (progress)="onProgress( $event )"></app-data>
     </div>
   </div>
 

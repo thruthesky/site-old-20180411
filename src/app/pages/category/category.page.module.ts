@@ -1,33 +1,29 @@
 import { NgModule } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule, Route } from '@angular/router';
-import { ForumPage } from './forum.page';
+import { CategoryPage } from './category.page';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { DataComponentModule } from '../../components/data/data.component.module';
-import { CommentComponentModule } from '../../components/comment/comment.component.module';
 
 const AppRoutes: Array<Route> = [
-    { component: ForumPage, path: ''  }
+    { component: CategoryPage, path: ''  }
 ];
 
 @NgModule({
     declarations: [
-        ForumPage
+        CategoryPage
     ],
     entryComponents: [
-        ForumPage
+        CategoryPage
     ],
     imports: [
         CommonModule,
         FormsModule,
         IonicModule,
-        RouterModule.forChild( AppRoutes ),
-        DataComponentModule,
-        CommentComponentModule
+        RouterModule.forChild( AppRoutes )
     ],
     bootstrap: [
-        ForumPage
+        CategoryPage
     ]
 })
-export class ForumPageModule {}
+export class CategoryPageModule {}

@@ -1,6 +1,7 @@
 import { Injectable, NgZone } from '@angular/core';
 import { LanguageService } from './language.service';
 import { Router } from '@angular/router';
+import { Base } from '../modules/firelibrary/core';
 
 
 export const SITE_KATALKENGLISH = 'katalkenglish';
@@ -39,6 +40,7 @@ export class AppService {
         // this.setColor('white');
 
 
+        Base.collectionDomain = 'database';
         this.site[this.getSite()] = true;
 
         // this.language.setUserLanguage();

@@ -54,7 +54,13 @@ const routes: Routes = [
     loadChildren: './pages/forum/forum.page.module#ForumPageModule'
   },
 
-
+  /**
+   * Admin Pages
+   */
+  {
+    path: 'category',
+    loadChildren: './pages/category/category.page.module#CategoryPageModule'
+  },
 
   /**
    * Defaults
