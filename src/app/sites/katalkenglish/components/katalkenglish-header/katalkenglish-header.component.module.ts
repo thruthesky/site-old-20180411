@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
@@ -17,6 +17,6 @@ import { KatalkEnglishHeaderComponent } from './katalkenglish-header.component';
     RouterModule,
     KatalkEnglishHeaderComponent
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: []
 })
 export class KatalkEnglishHeaderComponentModule { }
