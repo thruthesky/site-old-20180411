@@ -4,15 +4,15 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '', pathMatch: 'full',
-    loadChildren: './sites/katalkenglish/katalkenglish-home/katalkenglish-home.module#KatalkEnglishHomePageModule'
+    loadChildren: './sites/katalkenglish/pages/katalkenglish-home/katalkenglish-home.page.module#KatalkEnglishHomePageModule'
   },
   {
     path: 'help',
-    loadChildren: './sites/katalkenglish/katalkenglish-help/katalkenglish-help.module#KatalkEnglishHelpPageModule'
+    loadChildren: './sites/katalkenglish/pages/katalkenglish-help/katalkenglish-help.page.module#KatalkEnglishHelpPageModule'
   },
   {
     path: 'install',
-    loadChildren: './sites/katalkenglish/katalkenglish-install/katalkenglish-install.module#KatalkEnglishInstallPageModule'
+    loadChildren: './sites/katalkenglish/pages/katalkenglish-install/katalkenglish-install.page.module#KatalkEnglishInstallPageModule'
   },
 
 
@@ -21,14 +21,14 @@ const routes: Routes = [
    */
   {
     path: 'teacher',
-    loadChildren: './sites/ontue/ontue-home/ontue-home.module#OntueHomePageModule'
+    loadChildren: './sites/ontue/pages/ontue-home/ontue-home.page.module#OntueHomePageModule'
   },
 
 
   /**
    * withcenter.com for Franchise web site.
    */
-  { path: 'franchise', loadChildren: './sites/withcenter/withcenter-home/withcenter-home.module#WithcenterHomePageModule' },
+  { path: 'franchise', loadChildren: './sites/withcenter/pages/withcenter-home/withcenter-home.page.module#WithcenterHomePageModule' },
 
 
   /**
@@ -36,17 +36,17 @@ const routes: Routes = [
    */
   {
     path: 'register',
-    loadChildren: './pages/register/register.module#RegisterPageModule'
+    loadChildren: './pages/register/register.page.module#RegisterPageModule'
   },
 
   {
     path: 'login',
-    loadChildren: './pages/login/login.module#LoginPageModule'
+    loadChildren: './pages/login/login.page.module#LoginPageModule'
   },
 
   {
     path: 'profile',
-    loadChildren: './pages/profile/profile.module#ProfilePageModule'
+    loadChildren: './pages/profile/profile.page.module#ProfilePageModule'
   },
 
 
@@ -54,7 +54,7 @@ const routes: Routes = [
   /**
    * Defaults
    */
-  { path: '**', loadChildren: './pages/not-found/not-found.module#NotFoundPageModule' }
+  { path: '**', loadChildren: './pages/not-found/not-found.page.module#NotFoundPageModule' }
 ];
 
 

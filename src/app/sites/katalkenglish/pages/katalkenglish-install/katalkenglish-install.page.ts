@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from '../../../providers/app.service';
-import { FireService } from '../../../modules/firelibrary/core';
+import { AppService } from '../../../../providers/app.service';
+import { FireService } from '../../../../modules/firelibrary/core';
 import { Router } from '@angular/router';
 
 @Component({

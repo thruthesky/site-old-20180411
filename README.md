@@ -120,16 +120,29 @@ For instance, katalkenglish.com( student site ) and ontue.com ( teacher site ) h
  * Layout of `www.katalkenglish.com` for desktop.
  * Layout of `www.katalkenglish.com` for mobile.
 
+# Naming Convention
+
+## Module Names
+
+* Page module file name must end with `.page.module.ts` and the name of the Module class must end with `PageModule`.
+* And it is same to Component naming.
+
+## Folders
+
+* All pages must be under `pages` folder.
+* All components must be under `componenets` folder.
+
 
 # FlowChart
 
 ## Domain Navigation
 
-* The app decide which `site` to use based on the domain user accesses/visits.
+* The App Component choose which `site` to navigate with the domain user accesses/visits.
  * For instance, `wwww.ontue.com` domain will open the page `src/app/sites/ontue/ontue-home/ontue-home.page`
  * This navigation is done by the combination of `app-routing.modules.ts` and `app.component.ts`.
 
 
 # Boostrap CSS Version 4.0 Support
 
+* @see [Bootstrap v4 comtomization](https://getbootstrap.com/docs/4.0/getting-started/theming/#importing)
 * @see `themes/bootstrap-custom.scss`.
