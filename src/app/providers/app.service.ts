@@ -21,7 +21,7 @@ export class AppService {
      * It has site code on booting.
      * Use this in template whenever you need site code. This will not recompute anything and it's good to use in template.
      * @code
-     *      <section id="ontue" *ngIf=" share.site.ontue ">
+     *      <section id="ontue" *ngIf=" a.site.ontue ">
      */
     site: SITE = {
         ontue: false,

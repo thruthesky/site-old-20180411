@@ -9,16 +9,16 @@ import { FireService } from '../../../../modules/firelibrary/core';
 })
 export class KatalkEnglishHeaderComponent {
   constructor(
-    public share: AppService,
+    public a: AppService,
     public fire: FireService
   ) {
     // console.log(`HeaderComponent:constructor()`);
-    // console.log(`current: ${share.color}, change: red`);
-    // share.setColor('red');
+    // console.log(`current: ${a.color}, change: red`);
+    // a.setColor('red');
   }
   onClickLogout() {
     this.fire.user.logout();
-    this.share.openHome();
+    this.a.openHome();
   }
 }
 

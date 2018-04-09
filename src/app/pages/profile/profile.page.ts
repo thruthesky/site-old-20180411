@@ -19,7 +19,7 @@ export class ProfilePage implements OnInit, OnDestroy {
     percentage = 0;
     constructor(
         public fire: FireService,
-        public share: AppService
+        public a: AppService
     ) {
         /**
          * Get user data safely when user logs in.
@@ -32,7 +32,7 @@ export class ProfilePage implements OnInit, OnDestroy {
                     if (this.user.profilePhoto) {   // if user has profile photo.
                         this.data[0] = this.user.profilePhoto; // save profile photo at data[0]
                     }
-                    this.share.rerender();
+                    this.a.rerender();
                 }).catch(e => alert(e.message));
 
                 /**
@@ -43,7 +43,7 @@ export class ProfilePage implements OnInit, OnDestroy {
                 fire.user.listen(data => {
                     console.log('user data:', data);
                     this.data[0] = data.profilePhoto ? data.profilePhoto : {};
-                    this.share.rerender();
+                    this.a.rerender();
 
                     // if (data.profilePhoto !== void 0 && data.profilePhoto.created !== void 0) { // new data.
                     //     if (!this.data.length || !this.data[0] || !this.data[0].url

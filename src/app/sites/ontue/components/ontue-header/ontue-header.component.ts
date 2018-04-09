@@ -9,7 +9,7 @@ import { FireService } from '../../../../modules/firelibrary/core';
 })
 export class OntueHeaderComponent {
     constructor(
-        public share: AppService,
+        public a: AppService,
         public fire: FireService
     ) {
 

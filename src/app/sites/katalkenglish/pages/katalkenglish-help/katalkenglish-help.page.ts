@@ -8,11 +8,11 @@ import { AppService } from '../../../../providers/app.service';
 })
 export class KatalkEnglishHelpPage {
   constructor(
-    public share: AppService
+    public a: AppService
   ) {
     // console.log(`HelpPage:constructor()`);
-    // console.log(`current: ${share.color}, change: blue`);
-    // share.setColor('blue');
+    // console.log(`current: ${a.color}, change: blue`);
+    // a.setColor('blue');
   }
 }
 

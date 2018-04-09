@@ -12,7 +12,7 @@ export class NotFoundPage implements OnInit {
 
 
     constructor(
-        public share: AppService
+        public a: AppService
     ) {
         console.log(`NotFoundPage::constructor()`);
 

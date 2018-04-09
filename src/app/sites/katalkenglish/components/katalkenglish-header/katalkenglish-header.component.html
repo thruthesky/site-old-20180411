@@ -1,5 +1,5 @@
 <p>
-    <ion-button routerLink="{{ share.homeUrl }}">HOME</ion-button>
+    <ion-button routerLink="{{ a.homeUrl }}">HOME</ion-button>
     <ion-button routerLink="/help">Help</ion-button>
     <ion-button routerLink="/login" *ngIf="fire.user.isLogout">Login</ion-button>
     <ion-button (click)=" onClickLogout() " *ngIf="fire.user.isLogin">Log out</ion-button>

@@ -9,12 +9,12 @@ import { FireService } from '../../modules/firelibrary/core';
 })
 export class UserInfoComponent {
   constructor(
-    public share: AppService,
+    public a: AppService,
     public fire: FireService
   ) {
     // console.log(`HeaderComponent:constructor()`);
-    // console.log(`current: ${share.color}, change: red`);
-    // share.setColor('red');
+    // console.log(`current: ${a.color}, change: red`);
+    // a.setColor('red');
   }
 }
 

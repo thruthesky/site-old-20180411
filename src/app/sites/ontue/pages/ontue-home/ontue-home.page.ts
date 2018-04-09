@@ -10,7 +10,7 @@ import { FireService } from '../../../../modules/firelibrary/core';
 })
 export class OntueHomePage {
   constructor(
-    public share: AppService,
+    public a: AppService,
     public fire: FireService
   ) {
 

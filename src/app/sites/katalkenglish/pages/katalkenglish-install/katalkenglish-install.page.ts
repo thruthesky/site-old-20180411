@@ -16,7 +16,7 @@ export class KatalkEnglishInstallPage implements OnInit {
   };
   constructor(
     public router: Router,
-    public share: AppService,
+    public a: AppService,
     public fire: FireService
   ) {
     this.show.loader = true;

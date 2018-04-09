@@ -10,11 +10,11 @@ import { FireService } from '../../../../modules/firelibrary/core';
 })
 export class KatalkEnglishHomePage {
   constructor(
-    public share: AppService,
+    public a: AppService,
     public fire: FireService
   ) {
     console.log(`KatalkEnglisHomePage:;constructor()`);
-    share.language.resetUserLanguage('en');
+    a.language.resetUserLanguage('en');
   }
 }
 
