@@ -78,6 +78,14 @@ export class AppService {
     getDomain() {
         return window.location.hostname;
     }
+    getDomainAsEmailDomain() {
+            const domain = this.getDomain();
+            if ( domain === 'localhost' ) {
+                    return 'localhost.com';
+            } else {
+                    this.a.getDomain();
+            }
+    }
 
 
     private isKatalkenglishDomain() {

@@ -169,7 +169,7 @@ export class RegisterPage implements OnInit {
     registerFirebase(res: USER_REGISTER_RESPONSE) {
         console.log('registerFirebase(res): ', res);
         const data: USER = {
-            email: 'email' + res.ID + '@gmail.com',
+            email: 'email' + res.ID + '@' + this.a.getDomainAsEmailDomain(),
             password: res.session_id
         };
         this.fire.user.register(data).then(() => {
