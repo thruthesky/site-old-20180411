@@ -13,6 +13,8 @@
 * Do LMS functionality.
 * Create forum with realtime chat functionality.
 * Do design.
+* Push notification.
+
 
 
 * Enhance. Language Translation for 4 languages. English, Korean, Japanese, Chinese.
@@ -206,3 +208,21 @@ Since fontawesome takes a lot of spaces, you will only copy the SVG XML code int
 1. It will login at `PHP backend`.
 2. It will login at Firebase.
  2-1. If there the user is not registered on Firebase, then register.
+
+
+
+# Langage Translate
+
+* It uses `FireLibrary` Language Transation. It has `language.service.ts` and `translate.pipe.ts` for easy to use.
+
+How to use pipe)
+
+language JSON file.
+````
+  "Version": "Version #version"
+````
+
+In template)
+````
+{{ 'version' | t: {version: '0.3'} }}<
+````

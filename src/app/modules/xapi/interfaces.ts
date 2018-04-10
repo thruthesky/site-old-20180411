@@ -67,10 +67,11 @@ export type USER_DATA = REQUEST;
 
 export interface USER_REGISTER extends REQUEST {
     ID?: number;
+    domain?: string;                // @2018-04-10. Add domain for each user.
     user_email?: string;
     user_pass?: string;
     user_login?: string;
-    user_type?: string;
+    user_type?: '' | 'S' | 'T';
     name?: string;
     fullname?: string;
     display_name?: string;
@@ -106,7 +107,9 @@ export type USER_DATA_RESPONSE = USER_REGISTER;
 export interface USER_LOGIN_RESPONSE extends ID {
     user_email: string;
     display_name: string;
-    fullname: string;
+    fullname: string;           // name for curriculumn vitae.
+    name: string;               // student name.
+    nickname: string;           // nickname
     session_id: string;
     photoURL: string;
     photo: FILE;

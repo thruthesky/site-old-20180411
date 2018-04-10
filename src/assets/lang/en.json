@@ -1,5 +1,4 @@
 {
-
     "HOME": "Home",
     "UNKNOWN-ERROR": "Unkown error. #info",
     "FIREBASE-API-ERROR": "Firebase API error. #info",
@@ -21,5 +20,6 @@
     "AUTH/ID-TOKEN-REVOKED": "ID token is revoked/expired. Login again to get a new id token.",
     "AUTH/WRONG-PASSWORD": "Password was incorrect, #info",
     "YOU ARE NOT LOGGED IN": "You are not logged in.",
-    "Email": "Email"
+    "Email": "Email",
+    "Version": "Version: #version"
 }

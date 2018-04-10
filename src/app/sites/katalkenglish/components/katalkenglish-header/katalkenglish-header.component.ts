@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AppService } from '../../../../providers/app.service';
 import { FireService } from '../../../../modules/firelibrary/core';
+import { XapiUserService } from '../../../../modules/xapi/xapi.module';
 
 @Component({
   selector: 'katalkenglish-header',
@@ -10,14 +11,17 @@ import { FireService } from '../../../../modules/firelibrary/core';
 export class KatalkEnglishHeaderComponent {
   constructor(
     public a: AppService,
-    public fire: FireService
+    public fire: FireService,
+    public user: XapiUserService
   ) {
     // console.log(`HeaderComponent:constructor()`);
     // console.log(`current: ${a.color}, change: red`);
     // a.setColor('red');
   }
   onClickLogout() {
-    this.fire.user.logout();
+    this.fire.user.logout().then( () => {
+      this.user.logout();
+    });
     this.a.openHome();
   }
 }

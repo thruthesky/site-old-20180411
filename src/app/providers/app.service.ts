@@ -25,7 +25,10 @@ export class AppService {
 
     /**
      * It prepares site code on booting. So, it won't be computed again on run time.
-     * Use this in template whenever you need site code. This will not recompute anything and it's good to use in template.
+     * Use this whenever you need to determin if the user is using Stduent site or Teacher site
+     *      and inside template whenever you need site code.
+     *
+     * This will not recompute anything and it's good to use in template.
      * @code
      *      <section id="ontue" *ngIf=" a.site.ontue ">
      */
@@ -35,6 +38,10 @@ export class AppService {
         withcenter: false
     };
 
+    /**
+     * User's default photo
+     */
+    anonymousPhotoURL = 'assets/img/anonymous.png';
 
     constructor(
         public ngZone: NgZone,
@@ -53,10 +60,17 @@ export class AppService {
         this.site[this.getSite()] = true;
 
         console.log('urlBackend: ', env['urlBackend']);
-        xapi.setServerUrl( env['urlBackend'] );
+        xapi.setServerUrl(env['urlBackend']);
 
         // this.language.setUserLanguage();
     }
+    get isLogin() {
+        return this.user.isLogin;
+    }
+    get isLogout() {
+        return this.user.isLogout;
+    }
+
     setColor(color) {
         this.color = color;
         console.log(`Color has been set to ${this.color}`);
@@ -66,15 +80,23 @@ export class AppService {
     }
 
 
-    isKatalkenglishDomain() {
+    private isKatalkenglishDomain() {
         return this.getDomain().indexOf(SITE_KATALKENGLISH) !== -1;
     }
-    isOntueDomain() {
+    private isOntueDomain() {
         return this.getDomain().indexOf(SITE_ONTUE) !== -1;
     }
-    isWithcenterDomain() {
+    private isWithcenterDomain() {
         return this.getDomain().indexOf(SITE_WITHCENTER) !== -1;
     }
+
+    get studentTheme() {
+        return this.site.katalkenglish;
+    }
+    get teacherTheme() {
+        return this.site.ontue;
+    }
+
 
     /**
      * Returns site code.
@@ -173,6 +195,9 @@ export class AppService {
     rerender(timeout: number = 0) {
         setTimeout(() => this.ngZone.run(() => { }), timeout);
     }
+    render(t?) {
+        this.rerender(t);
+    }
 
     /**
      * Move the route to domain's Home
@@ -184,11 +209,19 @@ export class AppService {
         this.router.navigateByUrl('/profile');
     }
 
-    toast( msg ) {
-        if ( msg.message ) {
-            alert( msg.message );
+    toast(msg) {
+        if (msg.message) {
+            alert(msg.message);
         } else {
-            alert( msg );
+            alert(msg);
         }
+    }
+
+    /**
+     * Returns a random string.
+     * @param prefix Prefix to add infront of the random string
+     */
+    randomString(prefix = ''): string {
+        return prefix + (+new Date).toString(36).slice(-5);
     }
 }

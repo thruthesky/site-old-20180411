@@ -1,12 +1,13 @@
 <p>
     <ion-button routerLink="{{ a.homeUrl }}">HOME</ion-button>
     <ion-button routerLink="/help">Help</ion-button>
-    <ion-button routerLink="/login" *ngIf="fire.user.isLogout">Login</ion-button>
-    <ion-button (click)=" onClickLogout() " *ngIf="fire.user.isLogin">Log out</ion-button>
-    <ion-button routerLink="/register" *ngIf="fire.user.isLogout">Register</ion-button>
-    <ion-button routerLink="/profile" *ngIf="fire.user.isLogin">Profile update</ion-button>
+    <ion-button routerLink="/login" *ngIf="a.isLogout">Login</ion-button>
+    <ion-button (click)=" onClickLogout() " *ngIf="a.isLogin">Log out</ion-button>
+    <ion-button routerLink="/register" *ngIf="a.isLogout">Register</ion-button>
+    <ion-button routerLink="/register" *ngIf="a.isLogin">Update Profile</ion-button>
     <ion-button routerLink="/install">Install</ion-button>
     <ion-button routerLink="/forum">Forum</ion-button>
     <ion-button routerLink="/category">Category</ion-button>
+    <ion-button>Change Language</ion-button>
 </p>
 
