@@ -78,13 +78,25 @@ export class AppService {
     getDomain() {
         return window.location.hostname;
     }
-    getDomainAsEmailDomain() {
-            const domain = this.getDomain();
-            if ( domain === 'localhost' ) {
-                    return 'localhost.com';
-            } else {
-                    this.a.getDomain();
-            }
+    /**
+     * Returns user domain.
+     * If the domain is 'localhost', then it returns 'localhost.com'
+     */
+    // getDomainAsEmailDomain() {
+    //     const domain = this.getDomain();
+    //     if (domain === 'localhost') {
+    //         return 'localhost.com';
+    //     } else {
+    //         this.getDomain();
+    //     }
+    // }
+
+    /**
+     * Returns an email address of the user ID.
+     * @param ID User ID of WordPress Backend
+     */
+    getFirebaseLoginEmail(ID): string {
+        return 'user' + ID + '@wordpress.com';
     }
 
 

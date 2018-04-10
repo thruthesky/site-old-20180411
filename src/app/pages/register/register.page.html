@@ -10,8 +10,7 @@
 
 <div class="" *ngIf=" a.teacherTheme || a.user.isLogin ">
     <div class="">
-        <input class="" type="file"
-            (change)="fileUpload.onChangeFile($event)">
+        <input class="" type="file" (change)="fileUpload.onChangeFile($event)">
         <div class="w-25">
             <img class="w-50" src="{{ userProfilePhoto( files )}}">
         </div>
@@ -24,9 +23,6 @@
             (success)="onSuccessUploadPicture($event)"></xapi-file-upload-component>
     </div>
 </div>
-
-
-
 
 
 
@@ -66,15 +62,15 @@
     <div>
         <label class="label">{{ 'KAKAOTALK ID SHORT' | t }}</label>
         <div class="input">
-          <input class="w-100" type="text" [(ngModel)]="form.kakaotalk_id" name="kakaotalk_id">
-          <div class="py-3 fs-lg pointer" (click)=" onClickKakaoIDHelp() ">
-            {{ 'FIND KAKAOTALK ID' | t }}
-            <i class="fa fa-question-circle"></i>
-          </div>
+            <input class="w-100" type="text" [(ngModel)]="form.kakaotalk_id" name="kakaotalk_id">
+            <div class="py-3 fs-lg pointer" (click)=" onClickKakaoIDHelp() ">
+                {{ 'FIND KAKAOTALK ID' | t }}
+                <i class="fa fa-question-circle"></i>
+            </div>
         </div>
-      </div>
+    </div>
 
-      
+
     <button type="submit" *ngIf="!loader">Register</button>
     <div class="loader">
         <ion-spinner *ngIf=" show.registerLoader "></ion-spinner>
