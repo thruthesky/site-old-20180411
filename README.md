@@ -56,6 +56,20 @@ $ ng s --disable-host-check
 * [Ontue v3 Issues](https://github.com/thruthesky/ontue#issue-sh-boards)
 
 
+# Concepts
+
+## No Multiple Apps Intergration
+
+We may use Angular's [Multiple Apps Intergratin](https://github.com/angular/angular-cli/wiki/stories-multiple-apps) support since we have three different website.
+
+But we simply decide to differenciate the theme based on domain. It's much simpler when it comes to management.
+
+When source code is changed, we need only one time compilation and publishment. You don't have to manage all the three apps in one project.
+
+
+
+
+
 # Folder structure
 
 ## Pages
@@ -170,3 +184,25 @@ Since fontawesome takes a lot of spaces, you will only copy the SVG XML code int
 
 * Since we are using lazy loading, putting SVG XML code in template may be a good choice even if it does not reuse the icon.
 
+
+
+# Registration
+
+* It will get domain of the site and save it on user field.
+* Security does not matter on Firebase since Firebaes only holds not important data.
+ The point is secured on `PHP backend`.
+
+## Flowchart
+1. It will register at `PHP backend`.
+2. It will register at Firebase.
+  Password of the user is a combination of idx and register-date.
+  
+
+
+
+# Login
+
+## Flowchart of Login
+1. It will login at `PHP backend`.
+2. It will login at Firebase.
+ 2-1. If there the user is not registered on Firebase, then register.

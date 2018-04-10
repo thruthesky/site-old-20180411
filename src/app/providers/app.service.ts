@@ -2,6 +2,9 @@ import { Injectable, NgZone } from '@angular/core';
 import { LanguageService } from './language.service';
 import { Router } from '@angular/router';
 import { Base } from '../modules/firelibrary/core';
+import { XapiService, XapiUserService, XapiFileService, XapiLMSService } from '../modules/xapi/xapi.module';
+
+import env from './../../environment';
 
 
 export const SITE_KATALKENGLISH = 'katalkenglish';
@@ -13,6 +16,8 @@ export interface SITE {
     withcenter: boolean;
     katalkenglish: boolean;
 }
+
+
 
 @Injectable()
 export class AppService {
@@ -34,7 +39,11 @@ export class AppService {
     constructor(
         public ngZone: NgZone,
         public router: Router,
-        public language: LanguageService
+        public language: LanguageService,
+        public xapi: XapiService,
+        public user: XapiUserService,
+        public file: XapiFileService,
+        public lms: XapiLMSService,
     ) {
         // console.log(`AppService::constructor()`);
         // this.setColor('white');
@@ -42,6 +51,9 @@ export class AppService {
 
         Base.collectionDomain = 'database';
         this.site[this.getSite()] = true;
+
+        console.log('urlBackend: ', env['urlBackend']);
+        xapi.setServerUrl( env['urlBackend'] );
 
         // this.language.setUserLanguage();
     }
@@ -170,5 +182,13 @@ export class AppService {
     }
     openProfile() {
         this.router.navigateByUrl('/profile');
+    }
+
+    toast( msg ) {
+        if ( msg.message ) {
+            alert( msg.message );
+        } else {
+            alert( msg );
+        }
     }
 }

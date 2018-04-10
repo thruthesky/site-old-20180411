@@ -14,6 +14,8 @@ import {
 } from './sites/katalkenglish/components/katalkenglish-header/katalkenglish-header.component.module';
 
 import { LanguageService } from './providers/language.service';
+import { XapiModule, XapiService, XapiUserService, XapiLMSService, XapiFileService } from './modules/xapi/xapi.module';
+
 firebase.initializeApp({
   apiKey: 'AIzaSyBEv8lzyUI6kB8RyxG8xKnzv4WA6KfS6e4',
   authDomain: 'ontue-client-sites.firebaseapp.com',
@@ -35,12 +37,14 @@ firebase.initializeApp({
     AppRoutingModule,
     FirelibraryModule.forRoot({ functions: true }),
     OntueHeaderComponentModule,
-    KatalkEnglishHeaderComponentModule
+    KatalkEnglishHeaderComponentModule,
+    XapiModule
   ],
   providers: [
     FireService,
     AppService,
-    LanguageService
+    LanguageService,
+    XapiService, XapiUserService, XapiFileService, XapiLMSService
   ],
   bootstrap: [AppComponent]
 })
